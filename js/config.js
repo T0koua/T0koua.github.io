@@ -40,7 +40,7 @@ const siteConfig = {
     ],
     images: {
         profile: "images/profile-venti.jpg",
-        banner: "images/banner-venti.jpg",
+        banner: "images/tokoua.png",
         backgrounds: [
             "images/background-1.jpg",
             "images/background-2.jpg",
