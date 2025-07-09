@@ -2,40 +2,41 @@
 const siteConfig = {
     settings: {
         title: "Tokoua | Apresentação",
-        footer: "Design inspirado no Bardo Anemo. Feito com ❤️ e Three.js."
+        footer: "Feito com ❤️ by Zipped"
     },
     personal: {
         name: "Tokoua",
-        quote: "Ehe!",
-        age: "23",
+        quote: "Aqueles que buscam a Iluminação devem sempre se lembrar da necessidade de manter constantemente puros o corpo, a fala e a mente.",
+        age: "19",
         sexuality: "Bissexual",
-        gender: "Não-binário",
-        location: "Mondstadt"
+        gender: "Masculino",
+        location: "SP"
     },
     social: {
-        twitter: "https://twitter.com",
-        instagram: "https://instagram.com",
-        twitch: "https://twitch.tv",
-        discord: "#"
+        twitter: "https://x.com/euteamofx",
+        instagram: "https://instagram.com/devilmaycry.3",
+        twitch: "https://twitch.tv/t0koua",
+        discord: "tokoua"
     },
     setup: {
-        CPU: "Intel Core i9-13900K",
-        GPU: "NVIDIA GeForce RTX 4090",
-        RAM: "64GB DDR5 6000MHz",
-        Teclado: "Keychron Q1 Pro"
+        CPU: "Intel Core i5-9400F",
+        GPU: "NVIDIA Gtx 960",
+        RAM: "16GB",
+        Teclado: "Redragon Kumara",
+        Mouse: "Redragon Cobra"        
     },
     favorites: {
-        Jogos: ["Genshin Impact", "Stardew Valley", "Zelda: TotK"],
-        Animes: ["Mushishi", "Jujutsu Kaisen", "Frieren"],
-        Filmes: ["O Castelo Animado", "Your Name", "Spider-Verse"],
-        Séries: ["Arcane", "The Good Place", "Fleabag"],
-        Mangás: ["Witch Hat Atelier", "Dungeon Meshi"],
-        Personagens: ["Venti", "Howl Pendragon"]
+        Jogos: ["League of Legends", "Ori and the Will of the Wisps", "Devil may cry"],
+        Animes: ["Puella Magi Madoka Magica", "Nana", "Konosuba"],
+        Filmes: ["Puella Magi Madoka Magica the Movie Part III: Rebellion", "Princesa Mononoke", "Spider-Verse"],
+        Séries: ["Arcane", "Alice in Borderland", "Sonic Prime"],
+        Mangás: ["Yotsuba&", "Shuumatsu no Valkyrie"],
+        Personagens: ["Venti", "Aqua", "Madoka", "Toji", "Ryuko", "Kikuri Hiroi"]
     },
     curiosities: [
-        "Tenho uma coleção com mais de 50 canecas diferentes.",
-        "Minha comida favorita é pizza de quatro queijos.",
-        "Já maratonei todas as temporadas de One Piece duas vezes."
+        "Atualmente eu estou no segundo semestre da faculdade.",
+        "Meus pokemons lendários favoritos são o Rayquaza e o Celebi.",
+        "Ja apertei a mão do player Tauz e ele jogou água na minha cara."
     ],
     images: {
         profile: "images/profile-venti.jpg",
