@@ -43,17 +43,17 @@ function renderContent(config) {
 function initFloatingImages(config) {
     const container = document.getElementById('venti-floating-container');
     const positions = [
-        { top: '5%', left: '-15%', width: '170px', delay: '-1s', duration: '12s' },    
-        { top: '30%', right: '-18%', width: '200px', delay: '-3s', duration: '10s' }, 
-        { top: '55%', left: '-12%', width: '160px', delay: '-5s', duration: '13s' },  
-        { top: '80%', right: '-15%', width: '180px', delay: '-2s', duration: '11s' },  
-        { top: '10%', right: '-10%', width: '150px', delay: '-6s', duration: '14s' }, 
-        { top: '90%', left: '-10%', width: '210px', delay: '-4s', duration: '9s' },
-        { top: '45%', left: '-20%', width: '165px', delay: '-8s', duration: '15s' },
-        { top: '65%', right: '-22%', width: '175px', delay: '-7s', duration: '11s' },
-        { top: '20%', left: '-10%', width: '190px', delay: '-9s', duration: '10s' },
-        { top: '95%', right: '-12%', width: '155px', delay: '-11s', duration: '13s' }
-    ];
+    { top: '5%', left: '10%', width: '170px', delay: '-1s', duration: '12s' },
+    { top: '30%', right: '10%', width: '200px', delay: '-3s', duration: '10s' }, 
+    { top: '55%', left: '20%', width: '160px', delay: '-5s', duration: '13s' },
+    { top: '80%', right: '20%', width: '180px', delay: '-2s', duration: '11s' },
+    { top: '10%', right: '25%', width: '150px', delay: '-6s', duration: '14s' }, 
+    { top: '90%', left: '25%', width: '210px', delay: '-4s', duration: '9s' },
+    { top: '45%', left: '30%', width: '165px', delay: '-8s', duration: '15s' },
+    { top: '65%', right: '30%', width: '175px', delay: '-7s', duration: '11s' },
+    { top: '20%', left: '35%', width: '190px', delay: '-9s', duration: '10s' },
+    { top: '95%', right: '35%', width: '155px', delay: '-11s', duration: '13s' }
+];
     config.images.floating.forEach((src, i) => {
         const pos = positions[i % positions.length];
         const img = document.createElement('img');
