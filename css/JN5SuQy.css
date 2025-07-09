@@ -1,0 +1,93 @@
+/* Estilos base */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #0c1424;
+    color: #f0fdf4;
+    overflow-x: hidden;
+}
+h1, h2, h3 { font-family: 'Cinzel', serif; }
+
+/* Camadas de Fundo (z-index) */
+#background-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+#background-slideshow, #background-overlay, #bg-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+#background-slideshow { z-index: 1; }
+#background-overlay { background-color: rgba(12, 20, 36, 0.88); z-index: 2; }
+#bg-canvas { z-index: 3; }
+
+/* Slideshow */
+.slide {
+    position: absolute;
+    width: 100%; height: 100%;
+    background-size: cover; background-position: center;
+    opacity: 0;
+    animation: fade 18s infinite;
+    transition: transform 0.3s ease-out;
+}
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 6s; }
+.slide:nth-child(3) { animation-delay: 12s; }
+@keyframes fade {
+    0% { opacity: 0; transform: scale(1.05); }
+    10% { opacity: 1; transform: scale(1); }
+    33% { opacity: 1; transform: scale(1); }
+    43% { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 0; }
+}
+
+/* Cursor e Scrollbar */
+html {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="%23A7F3D0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>') 14 14, auto;
+    scrollbar-width: thin;
+    scrollbar-color: #6EE7B7 #0c1424;
+}
+a, button, .social-icon {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 2L12 12L22 12Z" fill="%2334D399" stroke="%23A7F3D0" stroke-width="1"/><path d="M22 12L12 12L12 22Z" fill="%236EE7B7" stroke="%23A7F3D0" stroke-width="1"/><path d="M12 22L12 12L2 12Z" fill="%2334D399" stroke="%23A7F3D0" stroke-width="1"/><path d="M2 12L12 12L12 2Z" fill="%236EE7B7" stroke="%23A7F3D0" stroke-width="1"/><circle cx="12" cy="12" r="1.5" fill="%23FFFFFF"/></svg>') 14 14, pointer;
+}
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0c1424; }
+::-webkit-scrollbar-thumb { background-color: #6EE7B7; border-radius: 20px; border: 3px solid #0c1424; }
+
+/* Cards */
+.card { 
+    background-color: rgba(17, 24, 39, 0.65);
+    backdrop-filter: blur(14px) saturate(180%);
+    border: 1px solid rgba(110, 231, 183, 0.2); 
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.card:hover { 
+    transform: translateY(-8px) scale(1.02); 
+    background-color: rgba(17, 24, 39, 0.85);
+    border-color: rgba(110, 231, 183, 0.6);
+}
+
+/* Cores e Animações de Conteúdo */
+.text-main { color: #A7F3D0; }
+.text-secondary { color: #E5E7EB; }
+.border-accent { border-color: #34D399; }
+.hidden-section { opacity: 0; transform: translateY(25px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; transition-delay: var(--delay, 0s); }
+.hidden-section.visible { opacity: 1; transform: translateY(0); }
+
+/* Imagens Flutuantes e Arrastáveis */
+.suspended-venti {
+    position: absolute; 
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: gentle-float 10s ease-in-out infinite;
+    z-index: 20;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255,255,255,0.1);
+    pointer-events: auto;
+    cursor: grab;
+}
+.is-dragging {
+    cursor: grabbing;
+    animation-play-state: paused;
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,255,255,0.2);
+    z-index: 21;
+}
+@keyframes gentle-float {
+    0%, 100% { transform: translateY(0px) rotate(-3deg); }
+    50% { transform: translateY(-25px) rotate(3deg); }
+} 
